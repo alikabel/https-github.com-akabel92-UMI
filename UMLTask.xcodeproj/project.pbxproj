@@ -13,6 +13,13 @@
 		41B5E1BC23AC0A840023FC72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41B5E1BB23AC0A840023FC72 /* Assets.xcassets */; };
 		41B5E1BF23AC0A840023FC72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41B5E1BD23AC0A840023FC72 /* LaunchScreen.storyboard */; };
 		41B5E1CA23AC0A840023FC72 /* UMLTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5E1C923AC0A840023FC72 /* UMLTaskTests.swift */; };
+		41B5E1D623AC0B6F0023FC72 /* NetworkClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5E1D523AC0B6F0023FC72 /* NetworkClient.swift */; };
+		41B5E1D823AC0CE60023FC72 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5E1D723AC0CE60023FC72 /* Endpoint.swift */; };
+		41B5E1DA23AC0F790023FC72 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5E1D923AC0F790023FC72 /* GithubAPI.swift */; };
+		41B5E1DE23AC10510023FC72 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5E1DD23AC10510023FC72 /* Constants.swift */; };
+		41B5E1E123AC11670023FC72 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5E1E023AC11670023FC72 /* Response.swift */; };
+		41B5E1E323AC152F0023FC72 /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5E1E223AC152F0023FC72 /* Repository.swift */; };
+		41B5E1E723AC254F0023FC72 /* RepositoryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5E1E623AC254F0023FC72 /* RepositoryDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +43,13 @@
 		41B5E1C523AC0A840023FC72 /* UMLTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UMLTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		41B5E1C923AC0A840023FC72 /* UMLTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UMLTaskTests.swift; sourceTree = "<group>"; };
 		41B5E1CB23AC0A840023FC72 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41B5E1D523AC0B6F0023FC72 /* NetworkClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkClient.swift; sourceTree = "<group>"; };
+		41B5E1D723AC0CE60023FC72 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
+		41B5E1D923AC0F790023FC72 /* GithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
+		41B5E1DD23AC10510023FC72 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		41B5E1E023AC11670023FC72 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		41B5E1E223AC152F0023FC72 /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		41B5E1E623AC254F0023FC72 /* RepositoryDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetails.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +91,9 @@
 		41B5E1B323AC0A820023FC72 /* UMLTask */ = {
 			isa = PBXGroup;
 			children = (
+				41B5E1DF23AC11570023FC72 /* Model */,
+				41B5E1DB23AC10300023FC72 /* Utilities */,
+				41B5E1D423AC0B3E0023FC72 /* Networking */,
 				41B5E1B423AC0A820023FC72 /* AppDelegate.swift */,
 				41B5E1B623AC0A820023FC72 /* ViewController.swift */,
 				41B5E1B823AC0A820023FC72 /* Main.storyboard */,
@@ -94,6 +111,34 @@
 				41B5E1CB23AC0A840023FC72 /* Info.plist */,
 			);
 			path = UMLTaskTests;
+			sourceTree = "<group>";
+		};
+		41B5E1D423AC0B3E0023FC72 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				41B5E1D523AC0B6F0023FC72 /* NetworkClient.swift */,
+				41B5E1D723AC0CE60023FC72 /* Endpoint.swift */,
+				41B5E1D923AC0F790023FC72 /* GithubAPI.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		41B5E1DB23AC10300023FC72 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				41B5E1DD23AC10510023FC72 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		41B5E1DF23AC11570023FC72 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				41B5E1E023AC11670023FC72 /* Response.swift */,
+				41B5E1E223AC152F0023FC72 /* Repository.swift */,
+				41B5E1E623AC254F0023FC72 /* RepositoryDetails.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,7 +243,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				41B5E1B723AC0A820023FC72 /* ViewController.swift in Sources */,
+				41B5E1DA23AC0F790023FC72 /* GithubAPI.swift in Sources */,
 				41B5E1B523AC0A820023FC72 /* AppDelegate.swift in Sources */,
+				41B5E1E323AC152F0023FC72 /* Repository.swift in Sources */,
+				41B5E1D823AC0CE60023FC72 /* Endpoint.swift in Sources */,
+				41B5E1E723AC254F0023FC72 /* RepositoryDetails.swift in Sources */,
+				41B5E1D623AC0B6F0023FC72 /* NetworkClient.swift in Sources */,
+				41B5E1DE23AC10510023FC72 /* Constants.swift in Sources */,
+				41B5E1E123AC11670023FC72 /* Response.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
