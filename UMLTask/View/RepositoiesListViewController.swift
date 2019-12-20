@@ -87,6 +87,7 @@ extension RepositoiesListViewController: UITableViewDataSource {
 
 extension RepositoiesListViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         delegate?.repositoiesListViewController(self, didSelectRepository: viewModel.repositoriesList[indexPath.row])
     }
 }
@@ -95,8 +96,10 @@ extension RepositoiesListViewController: UITableViewDelegate {
 
 extension RepositoiesListViewController: RepositoiesListViewModelDelegate {
     func repositoiesListViewModel(_ viewModel: RepositoiesListViewModel,
-                                  didSelectRepositoryName name: String,
-                                  owenerLoginName: String) {
+                                  didSelectRepositoryName fullName: String) {
+        let repositoryDetailsViewModel = RepositoryDetailsViewModel(fullName: fullName, networkClient: networkClient)
+        let repositoryDetailsViewController = RepositoryDetailsViewController(viewModel: repositoryDetailsViewModel)
         
+        navigationController?.pushViewController(repositoryDetailsViewController, animated: true)
     }
 }

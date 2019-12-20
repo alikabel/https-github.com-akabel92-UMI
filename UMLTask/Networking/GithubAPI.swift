@@ -10,7 +10,7 @@ import Foundation
 
 enum GithubAPI {
     case repositories
-    case repositoryDetails(ownerLoginName: String, repositoryName: String)
+    case repositoryDetails(repositoryFullName: String)
 }
 
 extension GithubAPI: EndpointType {
@@ -22,8 +22,8 @@ extension GithubAPI: EndpointType {
         switch self {
         case .repositories:
             return "/repositories"
-        case .repositoryDetails(let ownerLoginName, let repositoryName):
-            return "/search/repositories?q=repo:\(ownerLoginName)/\(repositoryName)"
+        case .repositoryDetails(let repositoryFullName):
+            return "/search/repositories?q=repo:\(repositoryFullName)"
         }
     }
 }

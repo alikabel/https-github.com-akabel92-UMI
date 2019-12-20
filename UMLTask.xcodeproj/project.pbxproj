@@ -20,6 +20,8 @@
 		41B5E1E723AC254F0023FC72 /* RepositoryDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5E1E623AC254F0023FC72 /* RepositoryDetails.swift */; };
 		41B5E1EA23AC39BC0023FC72 /* RepositoiesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5E1E923AC39BC0023FC72 /* RepositoiesListViewController.swift */; };
 		41B5E1EC23AC3CFF0023FC72 /* RepositoiesListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5E1EB23AC3CFF0023FC72 /* RepositoiesListViewModel.swift */; };
+		41B5E1F323AD58660023FC72 /* RepositoryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5E1F223AD58660023FC72 /* RepositoryDetailsViewController.swift */; };
+		41B5E1F523AD58A50023FC72 /* RepositoryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B5E1F423AD58A50023FC72 /* RepositoryDetailsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +52,8 @@
 		41B5E1E623AC254F0023FC72 /* RepositoryDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetails.swift; sourceTree = "<group>"; };
 		41B5E1E923AC39BC0023FC72 /* RepositoiesListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoiesListViewController.swift; sourceTree = "<group>"; };
 		41B5E1EB23AC3CFF0023FC72 /* RepositoiesListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoiesListViewModel.swift; sourceTree = "<group>"; };
+		41B5E1F223AD58660023FC72 /* RepositoryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsViewController.swift; sourceTree = "<group>"; };
+		41B5E1F423AD58A50023FC72 /* RepositoryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepositoryDetailsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +149,8 @@
 			children = (
 				41B5E1E923AC39BC0023FC72 /* RepositoiesListViewController.swift */,
 				41B5E1EB23AC3CFF0023FC72 /* RepositoiesListViewModel.swift */,
+				41B5E1F223AD58660023FC72 /* RepositoryDetailsViewController.swift */,
+				41B5E1F423AD58A50023FC72 /* RepositoryDetailsViewModel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -253,7 +259,9 @@
 				41B5E1B523AC0A820023FC72 /* AppDelegate.swift in Sources */,
 				41B5E1EC23AC3CFF0023FC72 /* RepositoiesListViewModel.swift in Sources */,
 				41B5E1E323AC152F0023FC72 /* Repository.swift in Sources */,
+				41B5E1F323AD58660023FC72 /* RepositoryDetailsViewController.swift in Sources */,
 				41B5E1D823AC0CE60023FC72 /* Endpoint.swift in Sources */,
+				41B5E1F523AD58A50023FC72 /* RepositoryDetailsViewModel.swift in Sources */,
 				41B5E1E723AC254F0023FC72 /* RepositoryDetails.swift in Sources */,
 				41B5E1EA23AC39BC0023FC72 /* RepositoiesListViewController.swift in Sources */,
 				41B5E1D623AC0B6F0023FC72 /* NetworkClient.swift in Sources */,

@@ -9,9 +9,7 @@
 import Foundation
 
 protocol RepositoiesListViewModelDelegate: class {
-    func repositoiesListViewModel(_ viewModel: RepositoiesListViewModel,
-                                  didSelectRepositoryName name: String,
-                                  owenerLoginName: String)
+    func repositoiesListViewModel(_ viewModel: RepositoiesListViewModel, didSelectRepositoryName fullName: String)
 }
 
 final class RepositoiesListViewModel {
@@ -32,7 +30,6 @@ final class RepositoiesListViewModel {
                 success?()
         },
             failure: {error in
-                print("Error: \(error)")
                 failure?(error)
         })
     }
@@ -41,8 +38,6 @@ final class RepositoiesListViewModel {
 extension RepositoiesListViewModel: RepositoiesListViewControllerDelegate {
     func repositoiesListViewController(_ viewController: RepositoiesListViewController,
                                        didSelectRepository repository: Repository) {
-        delegate?.repositoiesListViewModel(self,
-                                           didSelectRepositoryName: repository.fullName,
-                                           owenerLoginName: repository.owner.loginName)
+        delegate?.repositoiesListViewModel(self, didSelectRepositoryName: repository.fullName)
     }
 }

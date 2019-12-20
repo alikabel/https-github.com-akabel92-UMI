@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let networkClient = NetworkClient()
-        window?.rootViewController = RepositoiesListViewController(networkClient: networkClient)
+        let repositoiesListViewController = RepositoiesListViewController(networkClient: networkClient)
+        window?.rootViewController = UINavigationController(rootViewController: repositoiesListViewController)
         window?.makeKeyAndVisible()
         
         return true
