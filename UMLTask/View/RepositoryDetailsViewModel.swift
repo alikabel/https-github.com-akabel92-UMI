@@ -24,7 +24,7 @@ final class RepositoryDetailsViewModel {
                 repositoryFullName: fullName),
             type: RepositoryDetails.self,
             success: { [weak self] repository in
-                if repository.items.count != 0 {
+                if !repository.items.isEmpty {
                     self?.starsNumber = repository.items[0].starsCount
                     success?()
                 } else {

@@ -30,7 +30,7 @@ final class RepositoryDetailsViewController: UIViewController {
         
         let nameLabel = UILabel()
         nameLabel.font = UIFont.preferredFont(forTextStyle: .headline)
-        nameLabel.text = "Repository Name: \(viewModel.fullName)"
+        nameLabel.text = "Repository Full Name: \(viewModel.fullName)"
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.numberOfLines = 0
         view.addSubview(nameLabel)
