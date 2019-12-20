@@ -8,10 +8,16 @@
 
 import Foundation
 
-class RepositoiesListViewModel {
+protocol RepositoiesListViewModelDelegate: class {
+    func repositoiesListViewModel(_ viewModel: RepositoiesListViewModel,
+                                  didSelectRepositoryName name: String,
+                                  owenerLoginName: String)
+}
+
+final class RepositoiesListViewModel {
     private let networkClient: NetworkClient
-    
     var repositoriesList = [Repository]()
+    weak var delegate: RepositoiesListViewModelDelegate?
     
     init(networkClient: NetworkClient) {
         self.networkClient = networkClient
@@ -30,5 +36,13 @@ class RepositoiesListViewModel {
                 failure?(error)
         })
     }
-    
+}
+
+extension RepositoiesListViewModel: RepositoiesListViewControllerDelegate {
+    func repositoiesListViewController(_ viewController: RepositoiesListViewController,
+                                       didSelectRepository repository: Repository) {
+        delegate?.repositoiesListViewModel(self,
+                                           didSelectRepositoryName: repository.fullName,
+                                           owenerLoginName: repository.owner.loginName)
+    }
 }

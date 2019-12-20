@@ -8,15 +8,21 @@
 
 import UIKit
 
-class RepositoiesListViewController: UIViewController {
+protocol RepositoiesListViewControllerDelegate: class {
+    func repositoiesListViewController(_ viewController: RepositoiesListViewController,
+                                       didSelectRepository repository: Repository)
+}
+final class RepositoiesListViewController: UIViewController {
     private let tableView = UITableView()
     private let viewModel: RepositoiesListViewModel
     private let networkClient: NetworkClient
+    weak var delegate: RepositoiesListViewControllerDelegate?
     
     init(networkClient: NetworkClient) {
         self.networkClient = networkClient
         viewModel = RepositoiesListViewModel(networkClient: networkClient)
         super.init(nibName: nil, bundle: nil)
+        delegate = viewModel
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -25,6 +31,8 @@ class RepositoiesListViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        viewModel.delegate = self
         
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.delegate = self
@@ -78,5 +86,17 @@ extension RepositoiesListViewController: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 
 extension RepositoiesListViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        delegate?.repositoiesListViewController(self, didSelectRepository: viewModel.repositoriesList[indexPath.row])
+    }
+}
+
+// MARK: - RepositoiesListViewModelDelegate
+
+extension RepositoiesListViewController: RepositoiesListViewModelDelegate {
+    func repositoiesListViewModel(_ viewModel: RepositoiesListViewModel,
+                                  didSelectRepositoryName name: String,
+                                  owenerLoginName: String) {
+        
+    }
 }
